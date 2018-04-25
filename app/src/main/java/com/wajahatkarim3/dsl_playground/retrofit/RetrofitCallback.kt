@@ -14,7 +14,7 @@ class RetrofitCallback<T>(initMethod: RetrofitCallback<T>.() -> Unit) : Callback
     }
 
     override fun onResponse(call: Call<T>?, response: Response<T>?) {
-
+        onSuccessCallback(call, response)
     }
 
     fun onFailureCallback( function: (call: Call<T>?, throwable: Throwable?) -> Unit)
